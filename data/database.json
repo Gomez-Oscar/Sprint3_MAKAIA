@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "test user 1",
-      "phone_number": 3123455678,
-      "password": "mypassword",
+      "phone_number": 1234567890,
+      "password": "password",
       "profile_picture": "url",
       "online": true
     },

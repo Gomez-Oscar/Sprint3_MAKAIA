@@ -1,0 +1,15 @@
+@use 'initial';
+@use 'variables';
+@use 'mixins';
+@use 'sign-in';
+
+.main-container {
+  border: 1px solid black;
+  width: 375px;
+  height: 100vh;
+  margin: auto;
+
+  @media (min-width: 1115px) {
+    width: 1115px;
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", Sans-Serif;
+}
+
+.sign-in__headbar {
+  height: 5rem;
+  background-color: #128c7e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in__form {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-container {
+  border: 1px solid black;
+  width: 375px;
+  height: 100vh;
+  margin: auto;
+}
+@media (min-width: 1115px) {
+  .main-container {
+    width: 1115px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

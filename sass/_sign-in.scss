@@ -1,0 +1,14 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.sign-in__headbar {
+  height: 5rem;
+  background-color: v.$teal-green;
+  @include m.flex-center;
+}
+
+.sign-in__form {
+  padding: 2rem;
+  @include m.flex-center;
+  flex-direction: column;
+}
