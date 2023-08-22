@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "test user 1",
+      "phone_number": 3123455678,
+      "password": "mypassword",
+      "profile_picture": "url",
+      "online": true
+    },
+    {
+      "id": 2,
+      "name": "test user 2",
+      "phone_number": 3123455678,
+      "password": "mypassword",
+      "profile_picture": "url",
+      "online": true
+    },
+    {
+      "id": 3,
+      "name": "test user 3",
+      "phone_number": 3123455678,
+      "password": "mypassword",
+      "profile_picture": "url",
+      "online": true
+    },
+    {
+      "id": 4,
+      "name": "test user 4",
+      "phone_number": 3123455678,
+      "password": "mypassword",
+      "profile_picture": "url",
+      "online": true
+    }
+  ]
+}
