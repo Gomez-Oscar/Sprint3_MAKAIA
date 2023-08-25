@@ -1,14 +1,13 @@
 import { message } from '../scripts/utils/utils.js';
 import { getUsers } from './getUsers.js';
 
-const d = document;
-const signInButton = d.getElementById('sign-in-button');
+const signInButton = document.getElementById('sign-in-button');
 
 signInButton.addEventListener('click', async e => {
   e.preventDefault();
 
-  const phone = d.getElementById('phone').value.trim();
-  const password = d.getElementById('password').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const password = document.getElementById('password').value.trim();
 
   const users = await getUsers();
 
@@ -27,8 +26,8 @@ signInButton.addEventListener('click', async e => {
       user => user.phone_number == phone && user.password == password
     );
     if (foundUser) {
-      console.log(foundUser);
       message('success', `Welcome ${foundUser.name}`);
+      console.log(foundUser);
     } else {
       console.log('user not found');
     }

@@ -24,6 +24,13 @@ body {
   flex-direction: column;
 }
 
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .main-container {
   border: 1px solid black;
   width: 375px;

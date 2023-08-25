@@ -12,3 +12,8 @@
   @include m.flex-center;
   flex-direction: column;
 }
+
+a {
+  @include m.flex-center;
+  text-decoration: none;
+}
