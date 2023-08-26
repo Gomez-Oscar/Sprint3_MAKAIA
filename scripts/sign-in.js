@@ -9,8 +9,8 @@ const signUpLink = document.getElementById('sign-up-link');
 signInButton.addEventListener('click', async e => {
   e.preventDefault();
 
-  const phone = document.getElementById('phone').value.trim();
-  const password = document.getElementById('password').value.trim();
+  const phone = document.getElementById('phone-sign-in').value.trim();
+  const password = document.getElementById('password-sign-in').value.trim();
 
   const users = await getUsers();
 

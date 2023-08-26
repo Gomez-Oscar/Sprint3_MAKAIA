@@ -8,9 +8,10 @@ body {
   font-family: "Helvetica", Sans-Serif;
 }
 
-/* .sign-in {
+.sign-in {
   display: none;
-} */
+}
+
 .sign-in__headbar {
   height: 4rem;
   background-color: #128c7e;
@@ -34,10 +35,9 @@ a {
   text-decoration: none;
 }
 
-.sign-up {
+/* .sign-up {
   display: none;
-}
-
+} */
 .sign-up__headbar {
   height: 4rem;
   background-color: #128c7e;
