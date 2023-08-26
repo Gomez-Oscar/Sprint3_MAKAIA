@@ -1,23 +1,18 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-/* .sign-in {
+.sign-up {
   display: none;
-} */
+}
 
-.sign-in__headbar {
+.sign-up__headbar {
   height: 4rem;
   background-color: v.$teal-green;
   @include m.flex-center;
 }
 
-.sign-in__form {
+.sign-up__form {
   padding: 2rem;
   @include m.flex-center;
   flex-direction: column;
-}
-
-a {
-  @include m.flex-center;
-  text-decoration: none;
 }

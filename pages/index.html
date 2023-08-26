@@ -10,18 +10,66 @@
     <main class="main-container">
       <!-- sign in interface begins-->
       <div class="sign-in">
-        <div class="sign-in__headbar"><h2>Message App</h2></div>
+        <div class="sign-in__headbar"><h2>Sign in to your account</h2></div>
         <form class="sign-in__form">
-          <title>Log in to your account</title>
-          <label for="phone">Phone</label><br />
-          <input type="number" id="phone" name="phone" required /><br />
-          <label for="password">Password</label><br />
-          <input type="password" id="password" name="password" required /><br />
+          <label for="phone-sign-in">Phone</label><br />
+          <input
+            type="number"
+            id="phone-sign-in"
+            name="phone-sign-in"
+            required
+          /><br />
+          <label for="password-sign-in">Password</label><br />
+          <input
+            type="password"
+            id="password-sign-in"
+            name="password-sign-in"
+            required
+          /><br />
           <button id="sign-in-button">Sign In</button>
         </form>
-        <a href="">Sign Up for free</a>
+        <a href="" id="sign-up-link">Sign Up for free</a>
       </div>
       <!-- sign in interface ends-->
+
+      <!-- sign up interface begins-->
+
+      <div class="sign-up">
+        <div class="sign-up__headbar"><h2>Create an account</h2></div>
+        <form class="sign-up__form">
+          <label for="name-sign-up">Name</label><br />
+          <input
+            type="text"
+            id="name-sign-up"
+            name="name-sign-up"
+            required
+          /><br />
+          <label for="phone-sign-up">Phone</label><br />
+          <input
+            type="number"
+            id="phone-sign-up"
+            name="phone-sign-up"
+            required
+          /><br />
+          <label for="password-sign-up">Password</label><br />
+          <input
+            type="password"
+            id="password-sign-up"
+            name="password-sign-up"
+            required
+          /><br />
+          <label for="profile-picture-sign-up">Profile picture URL</label><br />
+          <input
+            type="url"
+            id="profile-picture-sign-up"
+            name="profile-picture-sign-up"
+            required
+          /><br />
+          <button id="sign-up-button">Sign Up</button>
+        </form>
+      </div>
+
+      <!-- sign up interface ends-->
     </main>
     <script type="module" src="../scripts/sign-in.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

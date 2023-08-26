@@ -8,8 +8,11 @@ body {
   font-family: "Helvetica", Sans-Serif;
 }
 
+/* .sign-in {
+  display: none;
+} */
 .sign-in__headbar {
-  height: 5rem;
+  height: 4rem;
   background-color: #128c7e;
   display: flex;
   align-items: center;
@@ -29,6 +32,26 @@ a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+
+.sign-up {
+  display: none;
+}
+
+.sign-up__headbar {
+  height: 4rem;
+  background-color: #128c7e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up__form {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .main-container {

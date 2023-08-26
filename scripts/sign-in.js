@@ -1,7 +1,10 @@
 import { message } from '../scripts/utils/utils.js';
 import { getUsers } from './getUsers.js';
 
+const signIn = document.querySelector('.sign-in');
+const signUp = document.querySelector('.sign-up');
 const signInButton = document.getElementById('sign-in-button');
+const signUpLink = document.getElementById('sign-up-link');
 
 signInButton.addEventListener('click', async e => {
   e.preventDefault();
@@ -32,4 +35,11 @@ signInButton.addEventListener('click', async e => {
       console.log('user not found');
     }
   }
+});
+
+signUpLink.addEventListener('click', e => {
+  e.preventDefault();
+
+  signIn.style = 'display: none';
+  signUp.style = 'display: block';
 });
