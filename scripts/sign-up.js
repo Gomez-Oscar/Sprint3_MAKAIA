@@ -2,8 +2,11 @@ import { message } from '../scripts/utils/utils.js';
 import { getUsers } from './getUsers.js';
 import { createUser } from './createUser.js';
 
+const signIn = document.querySelector('.sign-in');
+const signUp = document.querySelector('.sign-up');
 const signUpForm = document.querySelector('.sign-up__form');
 const signUpButton = document.getElementById('sign-up-button');
+const signInLink = document.getElementById('sign-in-link');
 
 signUpButton.addEventListener('click', async e => {
   e.preventDefault();
@@ -44,4 +47,10 @@ signUpButton.addEventListener('click', async e => {
     message('success', 'Your account was created successfully');
     signUpForm.reset();
   }
+});
+
+signInLink.addEventListener('click', e => {
+  e.preventDefault();
+  signIn.style = 'display: block';
+  signUp.style = 'display: none';
 });

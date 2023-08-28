@@ -1,6 +1,7 @@
 import { message } from '../scripts/utils/utils.js';
 import { getUsers } from './getUsers.js';
 
+const signInForm = document.querySelector('.sign-in__form');
 const signIn = document.querySelector('.sign-in');
 const signUp = document.querySelector('.sign-up');
 const signInButton = document.getElementById('sign-in-button');
@@ -30,6 +31,7 @@ signInButton.addEventListener('click', async e => {
     );
     if (foundUser) {
       message('success', `Welcome ${foundUser.name}`);
+      signInForm.reset();
       console.log(foundUser);
     } else {
       console.log('user not found');
@@ -39,7 +41,6 @@ signInButton.addEventListener('click', async e => {
 
 signUpLink.addEventListener('click', e => {
   e.preventDefault();
-
   signIn.style = 'display: none';
   signUp.style = 'display: block';
 });
