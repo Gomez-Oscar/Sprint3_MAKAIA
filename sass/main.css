@@ -8,9 +8,10 @@ body {
   font-family: "Helvetica", Sans-Serif;
 }
 
-/* .sign-in {
+.sign-in {
   display: none;
-} */
+}
+
 .sign-in__headbar {
   height: 4rem;
   background-color: #128c7e;
@@ -52,6 +53,53 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.mobile-header {
+  height: 4rem;
+  background-color: #ece5dd;
+}
+
+#user-profile-picture {
+  width: 50px;
+  border-radius: 50px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.main-title {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.search-bar-container {
+  background-color: #ece5dd;
+  margin: auto;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elements-container {
+  background-color: white;
+  border-radius: 50px;
+  width: 80%;
+  margin: auto;
+}
+.elements-container .search-icon {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.search-bar {
+  border: none;
+  width: 90%;
+}
+.search-bar:focus {
+  outline: none;
 }
 
 .main-container {

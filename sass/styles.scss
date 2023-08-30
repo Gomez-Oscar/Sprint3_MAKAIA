@@ -3,6 +3,7 @@
 @use 'mixins';
 @use 'sign-in';
 @use 'sign-up';
+@use 'home';
 
 .main-container {
   border: 1px solid black;
