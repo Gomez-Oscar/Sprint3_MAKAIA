@@ -56,25 +56,25 @@ a {
 }
 
 .mobile-header {
-  height: 4rem;
+  height: 4.5rem;
   background-color: #ece5dd;
+  display: flex;
+  align-items: center;
 }
-
-#user-profile-picture {
-  width: 50px;
+.mobile-header #user-profile-picture {
+  width: 40px;
   border-radius: 50px;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
-.main-title {
+.mobile-main-title {
   height: 3rem;
   display: flex;
   align-items: center;
   margin-left: 1rem;
 }
 
-.search-bar-container {
+.mobile-search-bar-container {
   background-color: #ece5dd;
   margin: auto;
   height: 4rem;
@@ -82,24 +82,49 @@ a {
   align-items: center;
   justify-content: center;
 }
-
-.elements-container {
+.mobile-search-bar-container .elements-container {
   background-color: white;
   border-radius: 50px;
   width: 80%;
   margin: auto;
 }
-.elements-container .search-icon {
+.mobile-search-bar-container .elements-container .search-icon {
   margin-left: 10px;
   margin-top: 5px;
 }
-
-.search-bar {
+.mobile-search-bar-container .search-bar {
   border: none;
   width: 90%;
 }
-.search-bar:focus {
+.mobile-search-bar-container .search-bar:focus {
   outline: none;
+}
+
+.mobile-message-list-item {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+.mobile-message-list-item .img-thumbnail {
+  width: 40px;
+  border-radius: 50px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.mobile-message-list-item .mobile-message-header {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.mobile-message-list-item .mobile-message-body {
+  display: flex;
+  gap: 4px;
+}
+.mobile-message-list-item p {
+  font-size: 12px;
+  color: #9b9b9b;
 }
 
 .main-container {

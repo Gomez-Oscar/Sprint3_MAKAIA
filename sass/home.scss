@@ -2,49 +2,81 @@
 @use 'mixins' as m;
 
 .mobile-header {
-  height: 4rem;
+  height: 4.5rem;
   background-color: v.$white-chocolate;
+  display: flex;
+  align-items: center;
+
+  #user-profile-picture {
+    width: 40px;
+    border-radius: 50px;
+    margin-left: 15px;
+  }
 }
 
-#user-profile-picture {
-  width: 50px;
-  border-radius: 50px;
-  margin-top: 5px;
-  margin-left: 10px;
-}
-
-.main-title {
+.mobile-main-title {
   height: 3rem;
   display: flex;
   align-items: center;
   margin-left: 1rem;
 }
 
-.search-bar-container {
+.mobile-search-bar-container {
   background-color: v.$white-chocolate;
   margin: auto;
   height: 4rem;
   @include m.flex-center;
-}
 
-.elements-container {
-  background-color: white;
-  border-radius: 50px;
+  .elements-container {
+    background-color: white;
+    border-radius: 50px;
 
-  width: 80%;
-  margin: auto;
+    width: 80%;
+    margin: auto;
 
-  .search-icon {
-    margin-left: 10px;
-    margin-top: 5px;
+    .search-icon {
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+  }
+
+  .search-bar {
+    border: none;
+    width: 90%;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
-.search-bar {
-  border: none;
-  width: 90%;
+.mobile-message-list-item {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid v.$light-gray;
 
-  &:focus {
-    outline: none;
+  .img-thumbnail {
+    width: 40px;
+    border-radius: 50px;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+
+  .mobile-message-header {
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .mobile-message-body {
+    display: flex;
+    gap: 4px;
+  }
+
+  p {
+    font-size: 12px;
+    color: v.$gray;
   }
 }
