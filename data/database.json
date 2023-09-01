@@ -2,34 +2,34 @@
   "users": [
     {
       "id": 1,
-      "name": "test user 1",
-      "phone_number": 3123455678,
-      "password": "mypassword",
-      "profile_picture": "url",
+      "name": "Oscar",
+      "phone_number": 3145802683,
+      "password": "password",
+      "profile_picture": "https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png",
       "online": true
     },
     {
       "id": 2,
-      "name": "test user 2",
-      "phone_number": 3123455678,
-      "password": "mypassword",
-      "profile_picture": "url",
+      "name": "Nancy",
+      "phone_number": 3022022844,
+      "password": "password",
+      "profile_picture": "https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693536682/Sprint3_MAKAIA/pjninc4pebvvxdwwwiyd.jpg",
       "online": true
     },
     {
       "id": 3,
-      "name": "test user 3",
-      "phone_number": 3123455678,
-      "password": "mypassword",
-      "profile_picture": "url",
+      "name": "Javier",
+      "phone_number": 3124567890,
+      "password": "password",
+      "profile_picture": "https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693536807/Sprint3_MAKAIA/wzj7gqmv7xusrzduozvo.jpg",
       "online": true
     },
     {
       "id": 4,
-      "name": "test user 4",
-      "phone_number": 3123455678,
-      "password": "mypassword",
-      "profile_picture": "url",
+      "name": "Pepe",
+      "phone_number": 3201234567,
+      "password": "password",
+      "profile_picture": "https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693536923/Sprint3_MAKAIA/xyguwtirmhkrre3kgp6p.jpg",
       "online": true
     }
   ],
