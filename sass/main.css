@@ -8,8 +8,13 @@ body {
   font-family: "Helvetica", Sans-Serif;
 }
 
-.sign-in {
+/* .sign-in {
   display: none;
+} */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .sign-in__headbar {
@@ -55,16 +60,28 @@ a {
   flex-direction: column;
 }
 
+.mobile-home {
+  display: none;
+}
+
 .mobile-header {
   height: 4.5rem;
-  background-color: #ece5dd;
+  background-color: #128c7e;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .mobile-header #user-profile-picture {
   width: 40px;
   border-radius: 50px;
   margin-left: 15px;
+}
+.mobile-header #log-out-icon {
+  width: 30px;
+  margin-right: 15px;
+}
+.mobile-header #log-out-icon:hover {
+  cursor: pointer;
 }
 
 .mobile-main-title {
@@ -75,7 +92,7 @@ a {
 }
 
 .mobile-search-bar-container {
-  background-color: #ece5dd;
+  background-color: #128c7e;
   margin: auto;
   height: 4rem;
   display: flex;
@@ -125,6 +142,9 @@ a {
 .mobile-message-list-item p {
   font-size: 12px;
   color: #9b9b9b;
+}
+.mobile-message-list-item:hover {
+  background-color: #128c7e;
 }
 
 .main-container {

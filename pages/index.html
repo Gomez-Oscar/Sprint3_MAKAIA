@@ -77,34 +77,40 @@
       <!-- sign up interface ends-->
 
       <!-- mobile home begins-->
-      <div class="mobile-header">
-        <img
-          src="https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png"
-          alt="profile picture"
-          id="user-profile-picture"
-        />
-      </div>
-      <div class="mobile-main-title"><h2>All Chats</h2></div>
-      <div class="mobile-search-bar-container">
-        <table class="elements-container">
-          <tr>
-            <td>
-              <span class="material-symbols-outlined search-icon">
-                search
-              </span>
-            </td>
-            <td>
-              <input
-                type="text"
-                class="search-bar"
-                placeholder="Search or start a new chat"
-              />
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="mobile-message-list-container">
-        <div class="mobile-message-list-item">
+      <div class="mobile-home">
+        <div class="mobile-header">
+          <img
+            src="https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png"
+            alt="profile picture"
+            id="user-profile-picture"
+          />
+          <img
+            src="../assets/logout.svg"
+            alt="log out icon"
+            id="log-out-icon"
+          />
+        </div>
+        <div class="mobile-main-title"><h2>All Chats</h2></div>
+        <div class="mobile-search-bar-container">
+          <table class="elements-container">
+            <tr>
+              <td>
+                <span class="material-symbols-outlined search-icon">
+                  search
+                </span>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  class="search-bar"
+                  placeholder="Search or start a new chat"
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="mobile-message-list-container">
+          <!-- <div class="mobile-message-list-item">
           <div class="img-thumbnail-container">
             <img
               src="https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png"
@@ -126,40 +132,14 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
             </div>
           </div>
+        </div> -->
         </div>
-
-        <!--  -->
-
-        <div class="mobile-message-list-item">
-          <div class="img-thumbnail-container">
-            <img
-              src="https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png"
-              alt="profile picture"
-              class="img-thumbnail"
-            />
-          </div>
-          <div class="mobile-message-information">
-            <div class="mobile-message-header">
-              <h4>Alex</h4>
-              <p>Friday</p>
-            </div>
-            <div class="mobile-message-body">
-              <img
-                src="../assets/double-check-svgrepo-com.svg"
-                alt="double check"
-                width="20px"
-              />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-            </div>
-          </div>
-        </div>
-
-        <!--  -->
       </div>
       <!-- mobile home ends-->
     </main>
     <script type="module" src="../scripts/sign-in.js"></script>
     <script type="module" src="../scripts/sign-up.js"></script>
+    <script type="module" src="../scripts/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

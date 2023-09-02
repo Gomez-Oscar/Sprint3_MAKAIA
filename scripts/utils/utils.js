@@ -3,7 +3,7 @@ export function message(type, text) {
 
   if (type === 'success') {
     flag = false;
-    time = 1500;
+    time = 1000;
   } else {
     flag = true;
     time = 5000;

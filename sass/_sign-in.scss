@@ -1,8 +1,14 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-.sign-in {
+/* .sign-in {
   display: none;
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .sign-in__headbar {
