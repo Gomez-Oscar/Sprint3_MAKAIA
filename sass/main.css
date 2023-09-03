@@ -169,11 +169,12 @@ a {
 }
 
 .profile-picture-edit-container {
-  height: 200px;
+  height: 220px;
   background-color: #e8e8e8;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .profile-picture-edit-container .auxiliar-container {
   position: relative;
@@ -218,6 +219,23 @@ a {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+.profile-picture-edit-container .edit-url {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+.profile-picture-edit-container .edit-url #check-icon-url {
+  width: 25px;
+}
+.profile-picture-edit-container .edit-url #check-icon-url:hover {
+  cursor: pointer;
+}
+.profile-picture-edit-container .edit-url #close-icon-url {
+  width: 22px;
+}
+.profile-picture-edit-container .edit-url #close-icon-url:hover {
+  cursor: pointer;
+}
 
 .edit-and-delete-container {
   height: 250px;
@@ -261,10 +279,10 @@ a {
   border: none;
   outline: none;
 }
-.edit-name .edit-information #check-icon {
+.edit-name .edit-information #check-icon-name {
   width: 20px;
 }
-.edit-name .edit-information #check-icon:hover {
+.edit-name .edit-information #check-icon-name:hover {
   cursor: pointer;
 }
 

@@ -4,16 +4,20 @@ import { updateUser } from './updateUser.js';
 export async function editProfile(user) {
   const currentNameText = document.querySelector('#current-name-text');
   const inputNamePlaceholder = document.querySelector('#input-name');
-  const profilePicture = document.querySelector('#profile-picture-edit');
+  const currentProfilePicture = document.querySelector('#profile-picture-edit');
+  const profilePictureContainer = document.querySelector('.auxiliar-container');
+  const editUrl = document.querySelector('.edit-url');
 
+  const closeIconUrl = document.getElementById('close-icon-url');
   const editNameIcon = document.getElementById('edit-icon');
-  const checkIcon = document.getElementById('check-icon');
+  const checkIconName = document.getElementById('check-icon-name');
+  const checkIconUrl = document.getElementById('check-icon-url');
   const currentName = document.querySelector('.current-name');
   const editInformation = document.querySelector('.edit-information');
 
   currentNameText.innerHTML = user.name;
   inputNamePlaceholder.placeholder = user.name;
-  profilePicture.src = user.profile_picture;
+  currentProfilePicture.src = user.profile_picture;
 
   editNameIcon.addEventListener('click', e => {
     e.preventDefault();
@@ -21,7 +25,7 @@ export async function editProfile(user) {
     editInformation.style = 'visibility: visible;';
   });
 
-  checkIcon.addEventListener('click', e => {
+  checkIconName.addEventListener('click', e => {
     e.preventDefault();
     const updatedName = document.querySelector('#input-name').value;
 
@@ -42,5 +46,42 @@ export async function editProfile(user) {
 
     currentName.style = 'visibility: visible;';
     editInformation.style = 'visibility: hidden;';
+  });
+
+  checkIconUrl.addEventListener('click', e => {
+    e.preventDefault();
+    const updatedUrl = document.querySelector('#input-url').value;
+
+    let regexUrl =
+      /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
+
+    if (updatedUrl.trim() === '') {
+      message('info', 'Enter a new URL');
+    } else if (!regexUrl.test(updatedUrl)) {
+      message('error', 'Not a valid URL');
+    } else {
+      const updatedUser = {
+        name: user.name,
+        phone_number: user.phone_number,
+        password: user.password,
+        profile_picture: updatedUrl,
+        online: true,
+      };
+
+      updateUser(user.id, updatedUser);
+      currentProfilePicture.src = updatedUser.profile_picture;
+
+      editUrl.style = 'visibility: hidden;';
+    }
+  });
+
+  profilePictureContainer.addEventListener('click', e => {
+    e.preventDefault();
+    editUrl.style = 'visibility: visible;';
+  });
+
+  closeIconUrl.addEventListener('click', e => {
+    e.preventDefault();
+    editUrl.style = 'visibility: hidden;';
   });
 }

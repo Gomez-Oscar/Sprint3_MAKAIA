@@ -22,9 +22,10 @@
 }
 
 .profile-picture-edit-container {
-  height: 200px;
+  height: 220px;
   background-color: v.$light-gray;
   @include m.flex-center;
+  flex-direction: column;
 
   .auxiliar-container {
     position: relative;
@@ -72,6 +73,25 @@
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       text-align: center;
+    }
+  }
+
+  .edit-url {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+
+    #check-icon-url {
+      width: 25px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    #close-icon-url {
+      width: 22px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -126,7 +146,7 @@
       outline: none;
     }
 
-    #check-icon {
+    #check-icon-name {
       width: 20px;
 
       &:hover {
