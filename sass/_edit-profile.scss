@@ -1,0 +1,120 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+/* .sign-in {
+  display: none;
+} */
+
+.mobile-edit-profile__header {
+  height: 4rem;
+  background-color: v.$teal-green;
+  display: flex;
+  align-items: center;
+
+  #left-arrow-icon {
+    width: 25px;
+    margin: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.profile-picture-edit-container {
+  height: 200px;
+  background-color: v.$light-gray;
+  @include m.flex-center;
+
+  .auxiliar-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+
+    .overlay {
+      position: absolute;
+      border-radius: 50%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.3s ease;
+      background-color: v.$gray;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    #profile-picture {
+      width: 160px;
+      border-radius: 50%;
+    }
+
+    #camera-icon {
+      width: 30px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+
+    #overlay-text {
+      position: absolute;
+      top: 65%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+}
+
+.edit-and-delete-container {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.edit-name {
+  // border: 1px solid black;
+
+  #name-title {
+    color: v.$teal-green;
+    margin: 10px 0 0 10px;
+  }
+
+  .current-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+
+    #edit-icon {
+      width: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.delete-user-container {
+  // border: 1px solid black;
+  #danger-title {
+    color: red;
+    margin: 10px 0 0 10px;
+  }
+
+  #delete-account-button {
+    margin: 15px;
+  }
+}

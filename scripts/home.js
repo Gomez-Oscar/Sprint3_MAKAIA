@@ -1,4 +1,5 @@
 import { getUsers } from './getUsers.js';
+import { editProfile } from './edit-profile.js';
 
 export async function displayUserHome(foundUser) {
   const users = await getUsers();
@@ -10,23 +11,9 @@ export async function displayUserHome(foundUser) {
   const mobileHome = document.querySelector('.mobile-home');
   const logoutButton = document.getElementById('log-out-icon');
 
-  const mobileHomeProfilePicture = document.querySelector('.mobile-header img');
+  const profilePicture = document.getElementById('user-profile-picture');
 
-  mobileHomeProfilePicture.src = foundUser.profile_picture;
-
-  logoutButton.addEventListener('click', e => {
-    e.preventDefault();
-
-    mobileHome.style = 'display: none';
-    signIn.style = 'display: block';
-
-    // delete the old users in the interface
-    [
-      ...document.querySelectorAll(
-        'div.mobile-home > div.mobile-message-list-container > div'
-      ),
-    ].map(e => e.remove());
-  });
+  profilePicture.src = foundUser.profile_picture;
 
   users.forEach(user => {
     const { name, profile_picture } = user;
@@ -61,5 +48,24 @@ export async function displayUserHome(foundUser) {
       itemElement.innerHTML = itemContent;
       itemsContainer.appendChild(itemElement);
     }
+  });
+
+  logoutButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    mobileHome.style = 'display: none';
+    signIn.style = 'display: block';
+
+    // delete the old users in the interface
+    [
+      ...document.querySelectorAll(
+        'div.mobile-home > div.mobile-message-list-container > div'
+      ),
+    ].map(e => e.remove());
+  });
+
+  profilePicture.addEventListener('click', e => {
+    e.preventDefault();
+    editProfile(foundUser);
   });
 }

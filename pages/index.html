@@ -37,7 +37,6 @@
       <!-- sign in interface ends-->
 
       <!-- sign up interface begins-->
-
       <div class="sign-up">
         <div class="sign-up__headbar"><h2>Create an account</h2></div>
         <form class="sign-up__form">
@@ -73,7 +72,6 @@
         </form>
         <a href="" id="sign-in-link">Return to sign in</a>
       </div>
-
       <!-- sign up interface ends-->
 
       <!-- mobile home begins-->
@@ -136,6 +134,53 @@
         </div>
       </div>
       <!-- mobile home ends-->
+
+      <!-- mobile edit profile begins-->
+      <div class="mobile-edit-profile">
+        <div class="mobile-edit-profile__header">
+          <img
+            src="../assets/left-arrow.svg"
+            alt="left arrow"
+            id="left-arrow-icon"
+          />
+          <h2>Profile</h2>
+        </div>
+        <div class="profile-picture-edit-container">
+          <div class="auxiliar-container">
+            <img
+              src="https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png"
+              alt="profile picture"
+              id="profile-picture"
+            />
+            <div class="overlay">
+              <img
+                src="../assets/camera.svg"
+                alt="overlay icon"
+                id="camera-icon"
+              />
+              <p id="overlay-text">CHANGE PICTURE</p>
+            </div>
+          </div>
+        </div>
+        <div class="edit-and-delete-container">
+          <div class="edit-name">
+            <h5 id="name-title">Your name</h5>
+            <div class="current-name">
+              <h4>Oscar</h4>
+              <img
+                src="../assets/edit-icon.svg"
+                alt="edit icon"
+                id="edit-icon"
+              />
+            </div>
+          </div>
+          <div class="delete-user-container">
+            <h5 id="danger-title">Danger zone</h5>
+            <button id="delete-account-button">Delete Account</button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile edit profile ends-->
     </main>
     <script type="module" src="../scripts/sign-in.js"></script>
     <script type="module" src="../scripts/sign-up.js"></script>

@@ -8,9 +8,10 @@ body {
   font-family: "Helvetica", Sans-Serif;
 }
 
-/* .sign-in {
+.sign-in {
   display: none;
-} */
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -75,6 +76,9 @@ a {
   width: 40px;
   border-radius: 50px;
   margin-left: 15px;
+}
+.mobile-header #user-profile-picture:hover {
+  cursor: pointer;
 }
 .mobile-header #log-out-icon {
   width: 30px;
@@ -145,6 +149,106 @@ a {
 }
 .mobile-message-list-item:hover {
   background-color: #128c7e;
+}
+
+/* .sign-in {
+  display: none;
+} */
+.mobile-edit-profile__header {
+  height: 4rem;
+  background-color: #128c7e;
+  display: flex;
+  align-items: center;
+}
+.mobile-edit-profile__header #left-arrow-icon {
+  width: 25px;
+  margin: 15px;
+}
+.mobile-edit-profile__header #left-arrow-icon:hover {
+  cursor: pointer;
+}
+
+.profile-picture-edit-container {
+  height: 200px;
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-picture-edit-container .auxiliar-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+.profile-picture-edit-container .auxiliar-container .overlay {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #9b9b9b;
+}
+.profile-picture-edit-container .auxiliar-container:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+.profile-picture-edit-container .auxiliar-container #profile-picture {
+  width: 160px;
+  border-radius: 50%;
+}
+.profile-picture-edit-container .auxiliar-container #camera-icon {
+  width: 30px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.profile-picture-edit-container .auxiliar-container #overlay-text {
+  position: absolute;
+  top: 65%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.edit-and-delete-container {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.edit-name #name-title {
+  color: #128c7e;
+  margin: 10px 0 0 10px;
+}
+.edit-name .current-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px;
+}
+.edit-name .current-name #edit-icon {
+  width: 20px;
+}
+.edit-name .current-name #edit-icon:hover {
+  cursor: pointer;
+}
+
+.delete-user-container #danger-title {
+  color: red;
+  margin: 10px 0 0 10px;
+}
+.delete-user-container #delete-account-button {
+  margin: 15px;
 }
 
 .main-container {
