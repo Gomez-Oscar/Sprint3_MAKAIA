@@ -1,9 +1,9 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-/* .sign-in {
+.mobile-edit-profile {
   display: none;
-} */
+}
 
 .mobile-edit-profile__header {
   height: 4rem;
@@ -51,7 +51,7 @@
       cursor: pointer;
     }
 
-    #profile-picture {
+    #profile-picture-edit {
       width: 160px;
       border-radius: 50%;
     }
@@ -85,6 +85,7 @@
 
 .edit-name {
   // border: 1px solid black;
+  position: relative;
 
   #name-title {
     color: v.$teal-green;
@@ -98,6 +99,34 @@
     margin: 15px;
 
     #edit-icon {
+      width: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .edit-information {
+    margin: 15px;
+
+    position: absolute;
+    top: 50;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+
+    #input-name {
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    #check-icon {
       width: 20px;
 
       &:hover {

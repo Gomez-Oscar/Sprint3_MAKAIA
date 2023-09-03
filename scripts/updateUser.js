@@ -2,13 +2,13 @@ import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
 
 const ENDPOINT = 'https://sprint3makaia-production.up.railway.app/users/';
 
-export async function createUser(user) {
+export async function updateUser(id, updatedUser) {
   try {
-    const response = await axios.post(ENDPOINT, user);
-    // console.log(response);
+    const response = await axios.put(ENDPOINT + id, {
+      ...updatedUser,
+    });
     return response;
   } catch (error) {
-    console.error('Error creating user:', error);
-    return [];
+    console.log('Error updating user');
   }
 }

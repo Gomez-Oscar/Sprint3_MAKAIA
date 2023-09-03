@@ -8,10 +8,9 @@ body {
   font-family: "Helvetica", Sans-Serif;
 }
 
-.sign-in {
+/* .sign-in {
   display: none;
-}
-
+} */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -151,9 +150,10 @@ a {
   background-color: #128c7e;
 }
 
-/* .sign-in {
+.mobile-edit-profile {
   display: none;
-} */
+}
+
 .mobile-edit-profile__header {
   height: 4rem;
   background-color: #128c7e;
@@ -198,7 +198,7 @@ a {
   opacity: 1;
   cursor: pointer;
 }
-.profile-picture-edit-container .auxiliar-container #profile-picture {
+.profile-picture-edit-container .auxiliar-container #profile-picture-edit {
   width: 160px;
   border-radius: 50%;
 }
@@ -226,6 +226,9 @@ a {
   justify-content: space-between;
 }
 
+.edit-name {
+  position: relative;
+}
 .edit-name #name-title {
   color: #128c7e;
   margin: 10px 0 0 10px;
@@ -240,6 +243,28 @@ a {
   width: 20px;
 }
 .edit-name .current-name #edit-icon:hover {
+  cursor: pointer;
+}
+.edit-name .edit-information {
+  margin: 15px;
+  position: absolute;
+  top: 50;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.edit-name .edit-information #input-name {
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+.edit-name .edit-information #check-icon {
+  width: 20px;
+}
+.edit-name .edit-information #check-icon:hover {
   cursor: pointer;
 }
 

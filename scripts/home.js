@@ -1,6 +1,16 @@
 import { getUsers } from './getUsers.js';
 import { editProfile } from './edit-profile.js';
 
+// editProfile({
+//   id: 1,
+//   name: 'Oscar',
+//   phone_number: 3145802683,
+//   password: 'password',
+//   profile_picture:
+//     'https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png',
+//   online: true,
+// });
+
 export async function displayUserHome(foundUser) {
   const users = await getUsers();
   const itemsContainer = document.querySelector(
@@ -12,6 +22,7 @@ export async function displayUserHome(foundUser) {
   const logoutButton = document.getElementById('log-out-icon');
 
   const profilePicture = document.getElementById('user-profile-picture');
+  const mobileEditProfile = document.querySelector('.mobile-edit-profile');
 
   profilePicture.src = foundUser.profile_picture;
 
@@ -66,6 +77,8 @@ export async function displayUserHome(foundUser) {
 
   profilePicture.addEventListener('click', e => {
     e.preventDefault();
+    mobileHome.style = 'display: none';
+    mobileEditProfile.style = 'display: block';
     editProfile(foundUser);
   });
 }
