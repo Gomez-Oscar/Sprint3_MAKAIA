@@ -1,16 +1,6 @@
 import { getUsers } from './getUsers.js';
 import { editProfile } from './edit-profile.js';
 
-/* editProfile({
-  id: 1,
-  name: 'Oscar',
-  phone_number: 3145802683,
-  password: 'password',
-  profile_picture:
-    'https://res.cloudinary.com/dbtqtuwzw/image/upload/v1693362118/Sprint3_MAKAIA/oscarProfilePicture.png',
-  online: true,
-}); */
-
 export async function displayUserHome(foundUser) {
   const users = await getUsers();
   const itemsContainer = document.querySelector(
@@ -25,6 +15,19 @@ export async function displayUserHome(foundUser) {
   const mobileEditProfile = document.querySelector('.mobile-edit-profile');
 
   profilePicture.src = foundUser.profile_picture;
+
+  // delete the old users in the interface
+  if (
+    document.querySelector(
+      'div.mobile-home > div.mobile-message-list-container > div'
+    )
+  ) {
+    [
+      ...document.querySelectorAll(
+        'div.mobile-home > div.mobile-message-list-container > div'
+      ),
+    ].map(e => e.remove());
+  }
 
   users.forEach(user => {
     const { name, profile_picture } = user;
@@ -63,16 +66,8 @@ export async function displayUserHome(foundUser) {
 
   logoutButton.addEventListener('click', e => {
     e.preventDefault();
-
     mobileHome.style = 'display: none';
     signIn.style = 'display: block';
-
-    // delete the old users in the interface
-    [
-      ...document.querySelectorAll(
-        'div.mobile-home > div.mobile-message-list-container > div'
-      ),
-    ].map(e => e.remove());
   });
 
   profilePicture.addEventListener('click', e => {

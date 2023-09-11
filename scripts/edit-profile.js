@@ -1,5 +1,6 @@
 import { message } from '../scripts/utils/utils.js';
 import { updateUser } from './updateUser.js';
+import { displayUserHome } from './home.js';
 
 export async function editProfile(user) {
   const currentNameText = document.querySelector('#current-name-text');
@@ -15,17 +16,23 @@ export async function editProfile(user) {
   const currentName = document.querySelector('.current-name');
   const editInformation = document.querySelector('.edit-information');
 
+  const backArrow = document.querySelector('#left-arrow-icon');
+  const mobileHome = document.querySelector('.mobile-home');
+  const mobileEditProfile = document.querySelector('.mobile-edit-profile');
+
+  let newUser = undefined;
+
   currentNameText.innerHTML = user.name;
   inputNamePlaceholder.placeholder = user.name;
   currentProfilePicture.src = user.profile_picture;
 
-  editNameIcon.addEventListener('click', e => {
+  /*   editNameIcon.addEventListener('click', e => {
     e.preventDefault();
     currentName.style = 'visibility: hidden;';
     editInformation.style = 'visibility: visible;';
-  });
-
-  checkIconName.addEventListener('click', e => {
+  }); */
+  /* 
+  checkIconName.addEventListener('click', async e => {
     e.preventDefault();
     const updatedName = document.querySelector('#input-name').value;
 
@@ -38,17 +45,17 @@ export async function editProfile(user) {
         online: true,
       };
 
-      updateUser(user.id, updatedUser);
+      newUser = updateUser(user.id, updatedUser);
 
       currentNameText.innerHTML = updatedUser.name;
       inputNamePlaceholder.placeholder = updatedUser.name;
-    }
+    } 
 
     currentName.style = 'visibility: visible;';
     editInformation.style = 'visibility: hidden;';
-  });
+  });*/
 
-  checkIconUrl.addEventListener('click', e => {
+  /*   checkIconUrl.addEventListener('click', e => {
     e.preventDefault();
     const updatedUrl = document.querySelector('#input-url').value;
 
@@ -68,12 +75,12 @@ export async function editProfile(user) {
         online: true,
       };
 
-      updateUser(user.id, updatedUser);
+      newUser = updateUser(user.id, updatedUser);
       currentProfilePicture.src = updatedUser.profile_picture;
 
       editUrl.style = 'visibility: hidden;';
     }
-  });
+  }); */
 
   profilePictureContainer.addEventListener('click', e => {
     e.preventDefault();
@@ -83,5 +90,12 @@ export async function editProfile(user) {
   closeIconUrl.addEventListener('click', e => {
     e.preventDefault();
     editUrl.style = 'visibility: hidden;';
+  });
+
+  backArrow.addEventListener('click', async e => {
+    e.preventDefault();
+    mobileEditProfile.style = 'display: none';
+    mobileHome.style = 'display: block';
+    newUser != undefined ? displayUserHome(newUser) : displayUserHome(user);
   });
 }
