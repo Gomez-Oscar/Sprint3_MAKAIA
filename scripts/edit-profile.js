@@ -1,6 +1,7 @@
 import { message } from '../scripts/utils/utils.js';
 import { updateUser } from './updateUser.js';
 import { displayUserHome } from './home.js';
+import { deleteUser } from './deleteUser.js';
 
 export async function editProfile(user) {
   const currentNameText = document.querySelector('#current-name-text');
@@ -17,8 +18,11 @@ export async function editProfile(user) {
   const editInformation = document.querySelector('.edit-information');
 
   const backArrow = document.querySelector('#left-arrow-icon');
+  const signIn = document.querySelector('.sign-in');
   const mobileHome = document.querySelector('.mobile-home');
   const mobileEditProfile = document.querySelector('.mobile-edit-profile');
+
+  const deleteUserButton = document.getElementById('delete-account-button');
 
   let newUser = undefined;
 
@@ -97,5 +101,28 @@ export async function editProfile(user) {
     mobileEditProfile.style = 'display: none';
     mobileHome.style = 'display: block';
     newUser != undefined ? displayUserHome(newUser) : displayUserHome(user);
+  });
+
+  deleteUserButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then(result => {
+      if (result.isConfirmed) {
+        deleteUser(user.id);
+        mobileEditProfile.style = 'display: none';
+        mobileHome.style = 'display: none';
+        signIn.style = 'display: block';
+
+        Swal.fire('Deleted!', 'Your account has been deleted.', 'success');
+      }
+    });
   });
 }
